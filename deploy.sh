@@ -1,6 +1,9 @@
-docker build -t 571998/multi-client:latest -t 571998/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t 571998/multi-server:latest -t 571998/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t 571998/multi-worker:latest -t 571998/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t 571998/multi-client:latest  -f ./client/Dockerfile ./client
+docker build -t 571998/multi-server:latest  -f ./server/Dockerfile ./server
+docker build -t 571998/multi-worker:latest  -f ./worker/Dockerfile ./worker
+docker build -t 571998/multi-client:$SHA  -f ./client/Dockerfile ./client
+docker build -t 571998/multi-server:$SHA  -f ./server/Dockerfile ./server
+docker build -t 571998/multi-worker:$SHA  -f ./worker/Dockerfile ./worker
 docker push 571998/multi-client:latest
 docker push 571998/multi-server:latest
 docker push 571998/multi-worker:latest
